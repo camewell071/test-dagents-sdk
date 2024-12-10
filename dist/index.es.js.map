@@ -1,0 +1,1 @@
+{"version":3,"file":"index.es.js","sources":["../src/index.ts"],"sourcesContent":["export function greet(name: string): string {\n    return `Hello, ${name}!`;\n}"],"names":["greet","name"],"mappings":"AAAO,SAASA,EAAMC,GAAsB;AACxC,SAAO,UAAUA,CAAI;AACzB;"}
