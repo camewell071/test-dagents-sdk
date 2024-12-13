@@ -1,0 +1,50 @@
+Arguments: 
+  /Users/macbookpro/.nvm/versions/node/v23.3.0/bin/node /usr/local/Cellar/yarn/1.22.18/libexec/bin/yarn.js build
+
+PATH: 
+  /Users/macbookpro/.nvm/versions/node/v23.3.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/macbookpro/.nvm/versions/node/v16.14.1/bin:/Users/macbookpro/Documents/GitHub/generative-xyz-website/node_modules/.bin:/Users/macbookpro/trustless-computer/eternal-dagent/node_modules/.bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  23.3.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/macbookpro/trustless-computer/eternal-dagent/packages/ts-sdk-sample/package.json: Expected double-quoted property name in JSON at position 345 (line 15 column 3)
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.18/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.18/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.18/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@eternal-dagent/ts-sdk-sample",
+    "version": "1.0.0",
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "private": false,
+    "license": "MIT",
+    "scripts": {
+      "build": "tsup src/index.ts --format esm,cjs --dts"
+    },
+    "dependencies": {
+      "bignumber.js": "^9.1.2",
+      "ethers": "5.7.2",
+    },
+    "devDependencies": {
+      "tsup": "^8.3.5",
+      "typescript": "^5.7.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

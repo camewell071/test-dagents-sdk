@@ -1,2 +1,5 @@
-.idea
-node_modules
+# Ignore node_modules in the root and all subdirectories
+node_modules/
+**/node_modules/
+
+.idea/

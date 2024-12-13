@@ -1,32 +1,29 @@
 {
-  "name": "test-dagents-sdk",
+  "name": "eternal-dagent",
   "version": "1.0.0",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
-  "types": "dist/types/index.d.ts",
-  "declarationDir": "dist/types",
-  "type": "module",
+  "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "tsc && vite build",
-    "prepare": "npm run build",
-    "publish": "npm publish --access public",
-    "build:types": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
-    "lint:scripts": "eslint ./src --ext .ts",
-    "lint:styles": "stylelint ./**/*.{css,scss}",
-    "format:scripts": "prettier ./src --write"
+    "build": "lerna run build",
+    "clean": "lerna clean && rimraf node_modules packages/**/node_modules",
+    "start:client": "node scripts/client-start.js",
+    "build:pkgs": "node scripts/build.js",
+    "build:pkg": "node scripts/build.js <package-name>",
+    "task": "node scripts/task.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "workspaces": [
+    "packages/*",
+    "client/*"
+  ],
   "devDependencies": {
-    "@types/node": "^22.10.1",
-    "dts-bundle-generator": "^9.5.1",
-    "stylelint": "^16.10.0",
-    "stylelint-config-recommended": "^14.0.1",
-    "stylelint-config-sass-guidelines": "^12.1.0",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.3",
-    "vite-plugin-dts": "^4.3.0"
+    "lerna": "^8.1.9",
+    "rimraf": "^5.0.10",
+    "tsup": "^8.3.5"
+  },
+  "resolutions": {
   }
 }

@@ -1,19 +1,25 @@
 {
   "name": "@test-agent/sample",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": false,
   "license": "MIT",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts"
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "watch": "tsup --watch"
   },
   "dependencies": {
-    "axios": "^1.7.9",
-    "bignumber.js": "^9.1.2"
+    "bignumber.js": "^9.1.2",
+    "ethers": "5.7.2",
+    "lodash": "^4.17.21",
+    "superagent": "^10.1.1"
   },
   "devDependencies": {
+    "@types/got": "^9.6.12",
+    "@types/lodash": "^4.17.13",
+    "@types/superagent": "^8.1.9",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
@@ -22,5 +28,6 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
-  }
+  },
+  "resolutions": {}
 }
