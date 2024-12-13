@@ -2,6 +2,7 @@ import BigNumber from "bignumber.js";
 import uniqBy from 'lodash/uniqBy';
 import { ethers } from "ethers";
 import superagent from 'superagent';
+import { testSample2 } from '@test-agent/sample-1';
 
 export function greet(name: string): string {
     return `Hello, ${name}! Welcome to the SDK!`;
@@ -30,4 +31,8 @@ export const testEthers = async () => {
 export const testLodash = async () => {
     const lodash = uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
     return lodash;
+}
+
+export const testSample = async () => {
+    return testSample2();
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@test-agent/sample",
+  "name": "@test-agent/sample-1",
   "version": "1.0.7",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
